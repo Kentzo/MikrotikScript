@@ -1,0 +1,9 @@
+{
+	"scope": "meta.parameters.add_default_route.mikrotik-script",
+	"completions":
+	[
+		"yes",
+		"no",
+		"special-classless"
+	]
+}
