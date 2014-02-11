@@ -1,0 +1,11 @@
+<snippet>
+	<!-- Note that there is no leading colon since only `if` part is substitued -->
+    <content><![CDATA[:if ($1) do={
+	$2
+} else={
+	$3
+};]]></content>
+    <tabTrigger>:if</tabTrigger>
+    <scope>source.mikrotik-script</scope>
+    <description>if</description>
+</snippet>
