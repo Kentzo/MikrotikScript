@@ -2,6 +2,6 @@
 	"scope": "source.mikrotik-script",
 	"completions":
 	[
-		"add-default-route",
+		"add-default-route="
 	]
 }
