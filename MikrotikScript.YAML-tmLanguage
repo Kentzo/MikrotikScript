@@ -121,10 +121,33 @@ repository:
 
   variable:
     patterns:
-    - match: (\$)(([0-9a-zA-Z]+)|(\".*\"))
+    - name: variable.other.mikrotik-script
+      match: (\$)([0-9a-zA-Z]+)
       captures:
         '1': {name: punctuation.definition.variable.mikrotik-script}
-        '2': {name: variable.other.mikrotik-script}
+
+    - name: variable.other.mikrotik-script
+      begin: (\$)(\")
+      beginCaptures:
+        '1': {name: punctuation.definition.variable.mikrotik-script}
+        '2': {name: punctuation.definition.variable.begin.mikrotik-script}
+      end: \"
+      endCaptures:
+        '0': {name: punctuation.definition.variable.end.mikrotik-script}
+      patterns:
+      - include: '#string-escape'
+
+      - include: '#line-continuation'
+
+      - name: invalid.illegal.newline.mikrotik-script
+        match: \n
+
+  variable-definition:
+    patterns:
+    - match: (\:)\b(global|local)\b
+      captures:
+        '1': {name: keyword.operator.other.mikrotik-script}
+        '2': {name: storage.type.mikrotik-script}
 
   control-flow:
     patterns:
