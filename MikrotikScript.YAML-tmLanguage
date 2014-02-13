@@ -151,7 +151,7 @@ repository:
 
   control-flow:
     patterns:
-    - match: \b(from|to|step|in|do|else|while)\b(\s*)(=)
+    - match: \b(from|to|step|in|do|else|while)\b([\s|\t]*)(=)
       captures:
         '1': {name: keyword.control.flow.mikrotik-script}
         '2': {name: invalid.illegal.whitespace.mikrotik-script}
