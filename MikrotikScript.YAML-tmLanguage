@@ -20,6 +20,7 @@ patterns:
 # - include: '#commands'
 # - include: '#functions'
 - include: '#operators'
+- include: '#line-continuation'
 - include: '#uncategorized'
 
 repository:
