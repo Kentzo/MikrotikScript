@@ -194,8 +194,20 @@ repository:
       comment: access array element by key
 
     - name: keyword.operator.other.mikrotik-script
-      match: \(|\)|\[|\]|\{|\}|:|;|\$|\/
+      match: :|\$|\/
       comment: delimeters
+
+    - name: punctuation.terminator.statement.mikrotik-script
+      match: ;
+
+    - name: meta.brace.round.mikrotik-script
+      match: \(|\)
+
+    - name: meta.brace.curly.mikrotik-script
+      match: \{|\}
+
+    - name: meta.brace.square.mikrotik-script
+      match: \[|\]
 
   string-escape:
     patterns:
