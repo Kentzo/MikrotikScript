@@ -16,6 +16,7 @@ patterns:
 - include: '#literal-date'
 - include: '#literal-number'
 - include: '#variable'
+- include: '#variable-definition'
 - include: '#control-flow'
 # - include: '#commands'
 # - include: '#functions'
@@ -147,10 +148,10 @@ repository:
 
   variable-definition:
     patterns:
-    - match: (\:)\b(global|local)\b
+    - match: (\:)(global|local)\b
       captures:
         '1': {name: keyword.operator.other.mikrotik-script}
-        '2': {name: storage.type.mikrotik-script}
+        '2': {name: storage.modifier.mikrotik-script}
 
   control-flow:
     patterns:
