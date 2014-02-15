@@ -1222,7 +1222,7 @@ repository:
     - name: support.function.mikrotik-script
       match: >
         (?x)
-        \b(
+        \b(?<!-)(
         Neighbor|
         aaa|
         accept\-filter|
@@ -1457,7 +1457,7 @@ repository:
         wds|
         web\-access|
         wireless
-        )\b
+        )(?!-)\b
 
   parameters-readonly:
     patterns:
@@ -2616,7 +2616,7 @@ repository:
         xauth\-login|
         xauth\-password|
         zone
-        )(?>!-)\b
+        )(?!-)\b
 
   literal-boolean:
     patterns:
