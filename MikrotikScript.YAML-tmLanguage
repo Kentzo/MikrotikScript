@@ -1464,7 +1464,7 @@ repository:
     - name: entity.other.attribute-name.readonly.mikrotik-script
       match: >
         (?x)
-        \b(
+        \b(?<!-)(
         2ghz\-10mhz\-power\-channels|
         2ghz\-11n\-channels|
         2ghz\-5mhz\-power\-channels|
@@ -2616,7 +2616,7 @@ repository:
         xauth\-login|
         xauth\-password|
         zone
-        )\b
+        )(?>!-)\b
 
   literal-boolean:
     patterns:
