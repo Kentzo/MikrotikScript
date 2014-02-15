@@ -56,7 +56,7 @@ repository:
     patterns:
     - match: >
         (?x)
-        (\b(?<words>
+        (\b(?<![\-=])(?<words>
         2ghz\-10mhz\-power\-channels|
         2ghz\-11n\-channels|
         2ghz\-5mhz\-power\-channels|
@@ -1208,21 +1208,18 @@ repository:
         xauth\-login|
         xauth\-password|
         zone
-        )
-        ([\s|\t]*?)(=))|
-        ((!)\g<words>\b)
+        )\b(?!-)(([\s\t]*?)(=))?)
       captures:
         '2': {name: entity.other.attribute-name.readwrite.mikrotik-script}
-        '3': {name: invalid.illegal.unexpected-text.mikrotik-script}
-        '4': {name: keyword.operator.assigment.mikrotik-script}
-        '6': {name: keyword.operator.logical.mikrotik-script}
+        '4': {name: invalid.illegal.unexpected-text.mikrotik-script}
+        '5': {name: keyword.operator.assigment.mikrotik-script}
 
   commands:
     patterns:
     - name: support.function.mikrotik-script
       match: >
         (?x)
-        \b(?<!-)(
+        \b(?<![\-=])(
         Neighbor|
         aaa|
         accept\-filter|
@@ -1464,7 +1461,7 @@ repository:
     - name: entity.other.attribute-name.readonly.mikrotik-script
       match: >
         (?x)
-        \b(?<!-)(
+        \b(?<![\-=])(
         2ghz\-10mhz\-power\-channels|
         2ghz\-11n\-channels|
         2ghz\-5mhz\-power\-channels|
