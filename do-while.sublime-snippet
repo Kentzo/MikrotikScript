@@ -1,9 +1,9 @@
 <snippet>
 	<!-- Note that there is no leading colon since only `do` part is substitued -->
-    <content><![CDATA[:do {
+    <content><![CDATA[do {
 	$1
 } while=(${2:true});$0]]></content>
-    <tabTrigger>:do</tabTrigger>
+    <tabTrigger>do</tabTrigger>
     <scope>source.mikrotik-script</scope>
     <description>do..while</description>
 </snippet>
