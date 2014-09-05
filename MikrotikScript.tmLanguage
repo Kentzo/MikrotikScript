@@ -106,21 +106,9 @@
 					<key>comment</key>
 					<string>comments are ignored by syntax</string>
 					<key>match</key>
-					<string>^(#).*$\n?</string>
+					<string>(#).*$\n?</string>
 					<key>name</key>
 					<string>comment.line.number-sign.mikrotik-script</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>invalid.illegal.unexpected-comment.mikrotik-script</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(#.*)$\n?</string>
 				</dict>
 			</array>
 		</dict>

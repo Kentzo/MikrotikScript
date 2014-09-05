@@ -43,14 +43,10 @@ repository:
   comments:
     patterns:
     - name: comment.line.number-sign.mikrotik-script
-      match: ^(#).*$\n?
+      match: (#).*$\n?
       captures:
         '1': {name: punctuation.definition.comment.mikrotik-script}
       comment: comments are ignored by syntax
-
-    - match: (#.*)$\n?
-      captures:
-        '1': {name: invalid.illegal.unexpected-comment.mikrotik-script}
 
   parameters-readwrite:
     patterns:
