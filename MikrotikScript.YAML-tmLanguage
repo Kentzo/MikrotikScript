@@ -1423,7 +1423,8 @@ repository:
         tonum|
         tool|
         tostr|
-        totime\:typeof|
+        totime|
+        typeof|
         tracking|
         traffic\-eng|
         traffic\-flow|
@@ -1449,7 +1450,8 @@ repository:
         watchdog|
         wds|
         web\-access|
-        wireless
+        wireless|
+        return
         )(?!-)\b
 
   parameters-readonly:
