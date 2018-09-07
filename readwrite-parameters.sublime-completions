@@ -243,7 +243,7 @@
 		"default-client-tx-limit=",
 		"default-cost=",
 		"default-forwarding=",
-		"default-for-dynamic="
+		"default-for-dynamic=",
 		"default-group=",
 		"default-name=",
 		"default-originate=",
