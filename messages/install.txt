@@ -1,0 +1,4 @@
+Thanks for installing. This package provides:
+
+- Syntax highlighting for Mikrotik script
+- Various static completions for common commands and parameters
