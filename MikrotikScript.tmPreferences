@@ -8,7 +8,6 @@
    <string>source.mikrotik-script</string>
    <key>settings</key>
    <dict>
-      <string></string>
       <key>shellVariables</key>
       <array>
          <dict>
