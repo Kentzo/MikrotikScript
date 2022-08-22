@@ -1153,6 +1153,17 @@
 		"write-access=",
 		"xauth-login=",
 		"xauth-password=",
-		"zone="
+		"zone=",
+		"max-limit=",
+		"connection-nat-state=",
+		"in-interface-list=",
+		"tls-host=",
+		"station-roaming=",
+		"wps-mode=",
+		"discover-interface-list=",
+		"ddns-enabled=",
+		"dont-require-permissions=",
+		"passthrough=",
+		"numbers="
 	]
 }
