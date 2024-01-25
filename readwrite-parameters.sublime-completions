@@ -1164,6 +1164,7 @@
 		"ddns-enabled=",
 		"dont-require-permissions=",
 		"passthrough=",
-		"numbers="
+		"numbers=",
+		"out-interface-list="
 	]
 }
