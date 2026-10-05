@@ -1,0 +1,17 @@
+{
+  "name": "tree-sitter-mikrotik",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MikroTik RouterOS syntax highlighting grammar for Zed",
+  "license": "MIT",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse examples/router.rsc",
+    "check": "python3 scripts/check.py",
+    "prepare:zed": "python3 scripts/prepare_zed.py"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "0.25.10"
+  }
+}

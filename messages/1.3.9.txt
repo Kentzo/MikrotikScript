@@ -1,1 +1,0 @@
-- Enable support for ST's Toggle Comment shortcut

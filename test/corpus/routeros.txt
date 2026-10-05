@@ -1,0 +1,64 @@
+==================
+Export paths and assignment
+==================
+/ip address
+add address=192.0.2.1/24 interface=bridge-lan disabled=no
+---
+(source_file
+  (path) (identifier)
+  (identifier) (identifier) (operator) (ipv4)
+  (identifier) (operator) (identifier)
+  (identifier) (operator) (boolean))
+
+==================
+Keywords do not split identifiers
+==================
+interface input forward nothing yesterday falsehood :locality
+---
+(source_file
+  (identifier) (identifier) (identifier) (identifier)
+  (identifier) (identifier) (builtin))
+
+==================
+Variables and strings
+==================
+:local name "router"
+:put $"interface-name"
+:put "Hello $name\n"
+---
+(source_file
+  (keyword) (identifier) (string (string_content))
+  (builtin) (variable (quoted_variable))
+  (builtin) (string (string_content) (variable (identifier)) (escape_sequence)))
+
+==================
+Nested control flow and command substitution
+==================
+:if ($count > 0) do={ :put [/ip address get $item address] } else={ :return false }
+---
+(source_file
+  (keyword)
+  (parenthesized_expression (variable (identifier)) (operator) (number))
+  (keyword) (operator)
+  (block (builtin) (command_substitution (path) (identifier) (identifier) (variable (identifier)) (identifier)))
+  (keyword) (operator) (block (keyword) (boolean)))
+
+==================
+Network literals and durations
+==================
+2001:db8::1/64 ::1 ::/0 02:00:00:00:00:01 1h30m 00:01:30 0xFF *A
+---
+(source_file (ipv6) (ipv6) (ipv6) (mac_address) (duration) (duration) (number) (internal_id))
+
+==================
+Comments, continuation and interpolation
+==================
+# export
+/ip route add \
+gateway=192.0.2.254
+:put "Result: $($count + 1)"
+---
+(source_file
+  (comment) (path) (identifier) (identifier) (line_continuation)
+  (identifier) (operator) (ipv4)
+  (builtin) (string (string_content) (string_expression (parenthesized_expression (variable (identifier)) (operator) (number)))))

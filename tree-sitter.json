@@ -1,0 +1,19 @@
+{
+  "grammars": [
+    {
+      "name": "mikrotik",
+      "camelcase": "Mikrotik",
+      "scope": "source.mikrotik",
+      "path": ".",
+      "file-types": ["rsc"],
+      "highlights": "languages/mikrotik/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "RouterOS configuration and script highlighting",
+    "authors": [{ "name": "Felipe Batista" }],
+    "links": { "repository": "https://github.com/BatistaFelipe/MikrotikScript" }
+  }
+}

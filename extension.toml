@@ -1,0 +1,13 @@
+id = "mikrotik"
+name = "MikroTik RouterOS"
+version = "0.1.0"
+schema_version = 1
+authors = ["Felipe Batista"]
+description = "Syntax highlighting for MikroTik RouterOS configuration and scripts (.rsc)"
+repository = "https://github.com/BatistaFelipe/MikrotikScript"
+
+[grammars.mikrotik]
+repository = "https://github.com/BatistaFelipe/MikrotikScript"
+# For distribution, replace with the commit containing this grammar after pushing.
+# Local development uses scripts/prepare_zed.py and an isolated local snapshot.
+rev = "master"
